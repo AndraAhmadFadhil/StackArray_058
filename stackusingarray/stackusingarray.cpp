@@ -10,10 +10,13 @@ public:
 	StackArray() {
 		top = -1;
 	}
-	int push(int element) {
+	void push() {
+		int element;
+		cout << "Enter an Element : ";
+		cin >> element;
 		if (top == 4) {
 			cout << "Number of data exceed the Limit" << endl;
-			return 0;
+			return;
 		}
 
 		top++;
@@ -21,7 +24,7 @@ public:
 		cout << endl;
 		cout << element << "ditambahkan(pushed)" << endl;
 
-		return element;
+		
 	}
 
 	void pop() {
@@ -51,5 +54,38 @@ public:
 };
 
 int main() {
-
+	StackArray s;
+	char ch;
+	while (true) {
+		cout << endl;
+		cout << "\n***Stack Menu***\n" << endl;
+		cout << "1. Push \n" << endl;
+		cout << "2. Pop \n" << endl;
+		cout << "3. Display \n" << endl;
+		cout << "4. Exit \n" << endl;
+		cout << "Enter your choice :";
+		cin >> ch;
+		switch (ch) {
+		case '1': {
+			s.push();
+			break;
+		}
+		case '2': 
+			if (s.empty()) {
+				cout << "\nStack is empty." << endl;
+				break;
+			}
+			s.pop();
+			break;
+		
+		case '3': 
+			s.display();
+			break;
+		case '4':
+			return 0;
+		default:
+			cout << "\nInvalid choice." << endl;
+			break;
+		}
+	}
 }
