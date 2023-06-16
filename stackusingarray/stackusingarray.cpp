@@ -6,4 +6,8 @@ class StackArray {
 private:
 	int stack_array[5];
 	int top;
+public:
+	StackArray() {
+		top = -1;
+	}
 };
