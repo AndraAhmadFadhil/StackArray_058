@@ -17,5 +17,6 @@ public:
 		}
 
 		top++;
+		stack_array[top] = element;
 	}
 };
