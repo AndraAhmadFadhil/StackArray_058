@@ -11,6 +11,11 @@ public:
 		top = -1;
 	}
 	int push(int element) {
+		if (top == 4) {
+			cout << "Number of data exceed the Limit" << endl;
+			return 0;
+		}
 
+		top++;
 	}
 };
