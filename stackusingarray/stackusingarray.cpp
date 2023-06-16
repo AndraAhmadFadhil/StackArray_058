@@ -10,4 +10,7 @@ public:
 	StackArray() {
 		top = -1;
 	}
+	int push(int element) {
+
+	}
 };
