@@ -38,5 +38,7 @@ public:
 		return (top == -1);
 	}
 
+	void display() {
 
+	}
 };
